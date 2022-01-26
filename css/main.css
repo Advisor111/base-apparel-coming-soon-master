@@ -1,0 +1,214 @@
+/* start variables */
+:root {
+    /* strat color */
+    /* Primary */
+    --Desaturated-Red: rgb(206, 151, 151) ;
+    --Soft-Red: hsl(0, 93%, 68%) ;
+    /* Neutral */
+    --Dark-Grayish-Red: hsl(0, 6%, 24%) ;
+    /* end color */
+}
+/* end variables */
+/* start global rulse */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container {
+    padding: auto ;
+    margin: 0 auto;
+}
+/* start media */
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 748px;
+    }
+}
+/* medium */
+@media (min-width: 992px) {
+    .container {
+        width: 972px;
+    }
+}
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1180px;
+    }
+}
+/* end media */
+/* end global rulse */
+/* start section */
+.section .container {
+    position: relative;
+}
+.section .header .logo {
+    width: 160px;
+    padding: 30px;
+}
+.section .header .logo + img {
+    width: 100%;
+}
+.section .subscribe {
+    padding: 0 32px;
+    text-align: center;
+    margin-top: 60px;
+    height: 399px;
+}
+.section .subscribe h1 {
+    color: var(--Dark-Grayish-Red);
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 10px;
+    line-height: 1.1;
+}
+.section .subscribe h1 span {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+}
+.section .subscribe p {
+    font-size: 14px;
+    color: var(--Desaturated-Red);
+    line-height: 1.5;
+}
+.section .subscribe form {
+    outline: 1px solid hsla(0, 6%, 24%, 0.2);
+    justify-content: center;
+    display: flex;
+    margin: 35px auto 60px;
+    width: auto;
+    border-radius: 5rem;
+    position: relative;
+    max-height: 45px;
+}
+.section .subscribe .error {
+    outline: 2px solid var(--Soft-Red);
+}
+.section .subscribe .error input[type="email"]::placeholder {
+    color: var(--Soft-Red);
+}
+.section .subscribe form input[type="email"] {
+    width: -webkit-fill-available;
+    border: none;
+    color: var(--Dark-Grayish-Red);
+    text-indent: 25px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 15px;
+}
+.section .subscribe form input[type="email"]:focus {
+    outline: none;
+}
+.section .subscribe form input[type="email"]::placeholder {
+    font-size: 13px;
+    color: hsla(0, 6%, 24%, 0.3);
+}
+.section .subscribe form input[type="submit"] {
+    width: 80px;
+    height: 45px;
+    border: none;
+    border-radius: 5rem;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    transition: 1.3s;
+    cursor: pointer;
+    position: relative;
+}
+.section .subscribe form input[type="submit"]:hover {
+    box-shadow: 0px 10px 30px -5px #ee8c8c;
+    transition: 0.3s;
+}
+.section .subscribe form::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/icon-arrow.svg);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    top: 12px;
+    right: 15px;
+}
+.section .subscribe .error-mass {
+    margin-top: -50px;
+    font-size: 11px;
+    color: var(--Soft-Red);
+    margin-bottom: 50px;
+    text-align: initial;
+    margin-left: 26px;
+}
+footer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+}
+footer .attribution {
+    color: var(--Dark-Grayish-Red);
+    font-size: 11px;
+    text-align: center;
+}
+footer .attribution a {
+    color: var(--Desaturated-Red);
+    transition: 0.8s;
+}
+footer .attribution a:hover {
+    color: var(--Dark-Grayish-Red);
+}
+/* start query */
+@media (min-width: 768px) {
+    .section {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 100vh;
+    }
+    .section .container {
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-size: cover;
+    }
+    .section .subscribe {
+        padding: 0 120px;
+        text-align: left;
+        height: unset;
+    }
+    .section .subscribe .logo {
+        margin-bottom: 90px;
+        width: 160px;
+    }
+    .section .subscribe h1 {
+        font-size: 80px;
+        margin: 20px 0;
+    }
+    .section .subscribe p {
+        line-height: 1.8;
+        font-size: 16px;
+    }
+    .section .subscribe form {
+        max-width: 450px;
+        margin-left: 0;
+        max-height: 53px;
+    }
+    .section .subscribe form input[type="submit"] {
+        width: 120px;
+        height: 50px;
+    }
+    .section .subscribe form::after {
+        top: 15px;
+        right: 31px;
+    }
+    .section .subscribe .error-mass {
+        font-size: 14px;
+    }
+    footer {
+        bottom: 15px;
+        position: absolute;
+    }
+}
+/* end section */
